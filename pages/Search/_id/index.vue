@@ -22,10 +22,11 @@
           Language(s):
       <ul>
         <li v-for="lang in fact.languages" :key="lang">
-          Name: {{ lang.name }} ({{ lang.nativeName }})
+          {{ lang.name }} ({{ lang.nativeName }})
         </li>
       </ul>
     </p>
+    <img v-bind:src="imgUrl">
   </div>
 </template>
 

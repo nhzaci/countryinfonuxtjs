@@ -1,10 +1,15 @@
 <template>
-  <nuxt-link :to="'Search/' + name">
+  <div class="bg-teal-500 border rounded-lg overflow-hidden">
     <div>
-      <p>{{ name }}</p>
-      <img class="h-32 w-32 flex-shrink-0" src="resolve_img_url(`https://www.countryflags.io/${acode}/flat/32.png`)">
+      <img class="p-6 h-full" v-bind:src="imgUrl">
     </div>
-  </nuxt-link>
+    <div class="p-6">
+      <h3 class="font-semibold text-2xl">{{ name }}</h3>
+      <div class="text-gray-700 text-xs uppercase">
+        {{ region }}
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -12,7 +17,11 @@ export default {
   name: "Info",
   props:['name', 'region', 'timezones', 'calling-code',
     'id', 'acode'],
-  
+  data() {
+    return {
+      imgUrl: `https://www.countryflags.io/${this.acode}/flat/64.png`
+    }
+  }
 }
 </script>
 

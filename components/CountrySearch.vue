@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex justify-center w-full">
     <form class="w-full max-w-sm" @submit.prevent="onSubmit">
       <div class="flex items-center border-b border-b-2 border-teal-500 py-2">
         <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 px-1 leading-tight focus:outline-none" type="text" v-model="text" placeholder="Search countries here..." aria-label="">

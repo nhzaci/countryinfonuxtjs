@@ -1,10 +1,9 @@
 <template>
-  <div>
-    <h1>Search for your country</h1>
+  <div id="app" class="antialiased text-gray-900">
     <CountrySearch v-on:search-text="searchText" />
     <Info v-for="fact in facts" :key="fact.numericCode"
     :id="fact.name" :name="fact.name" :calling-codes="fact.callingCodes"
-    :timezones="fact.timezones" :region="fact.subregion" :acode=fact.alpha2Code />
+    :timezones="fact.timezones" :region="fact.subregion" :acode="fact.alpha2Code" />
  </div>
 </template>
 
