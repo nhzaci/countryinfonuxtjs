@@ -1,20 +1,22 @@
 <template>
   <div>
-    <NavBar />
+    <div>
+      <NavBar/>
+    </div>
     <nuxt />
-    <AppFooter />
+    <div>
+      <AppFooter class="inset-x-0 bottom-0 h-6" />
+    </div>
   </div>
 </template>
 
 <script>
 import NavBar from '../components/NavBar';
-import AppHeader from '../components/AppHeader';
 import AppFooter from '../components/AppFooter';
 
 export default {
   components: {
     NavBar,
-    AppHeader,
     AppFooter
   }
 }

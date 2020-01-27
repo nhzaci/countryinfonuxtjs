@@ -1,15 +1,17 @@
 <template>
-  <div class="bg-teal-500 border rounded-lg overflow-hidden">
-    <div>
-      <img class="p-6 h-full" v-bind:src="imgUrl">
-    </div>
-    <div class="p-6">
-      <h3 class="font-semibold text-2xl">{{ name }}</h3>
-      <div class="text-gray-700 text-xs uppercase">
-        {{ region }}
+  <nuxt-link :to="'search/' + name">
+    <div class="bg-gray-400 rounded-lg overflow-hidden shadow-lg">
+      <div class="object-cover">
+        <img src="../assets/pictures/sample-banner.jpg" />
+      </div>
+      <div class="p-4">
+        <h3 class="sticky top-0 font-semibold text-2xl">{{ name }}</h3>
+        <div class="text-gray-700 text-xs uppercase">
+          {{ region }}
+        </div>
       </div>
     </div>
-  </div>
+  </nuxt-link>
 </template>
 
 <script>

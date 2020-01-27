@@ -21,8 +21,8 @@
     <!-- Second part: drop-down menu -->
     <div :class="isOpen ? 'block' : 'hidden'" class="px-2 pt-1 pb-4">
       <nuxt-link class="block text-white font-semibold rounded px-2 py-1 hover:bg-gray-800" to='/'>Home</nuxt-link>
-      <nuxt-link class="block text-white font-semibold rounded px-2 py-1 hover:bg-gray-800" to='/'>About</nuxt-link>
-      <nuxt-link class="block text-white font-semibold rounded px-2 py-1 hover:bg-gray-800" to='/'>Search</nuxt-link>
+      <nuxt-link class="block text-white font-semibold rounded px-2 py-1 hover:bg-gray-800" to='/about'>About</nuxt-link>
+      <nuxt-link class="block text-white font-semibold rounded px-2 py-1 hover:bg-gray-800" to='/Search'>Search</nuxt-link>
     </div>
   </header>
 </template>
