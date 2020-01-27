@@ -1,0 +1,19 @@
+{
+  "name": "DailyTrivia",
+  "version": "1.0.0",
+  "description": "Trivias to fill your brain daily",
+  "author": "nhzaci",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "nuxt": "^2.0.0",
+    "tailwindcss": "^1.1.4"
+  },
+  "devDependencies": {}
+}
