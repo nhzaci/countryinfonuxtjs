@@ -1,39 +1,58 @@
 <template>
-  <div class="body">
-    <nuxt-link to="/Search">Back to Search</nuxt-link>
-    <h1>{{fact.name}}</h1>
-    <h3>Region: {{fact.subregion}}</h3>
-    <p>
-      Calling Code(s): 
-      <ul>
-        <li v-for="code in fact.callingCodes" :key="code">
-          {{ code }}
-        </li>
-      </ul>
-    </p>
-    <p>
-      Time Zone(s):
-      <ul>
-        <li v-for="tz in fact.timezones" :key="tz">
-          {{ tz }}
-        </li>
-      </ul>
-    </p>
-          Language(s):
-      <ul>
-        <li v-for="lang in fact.languages" :key="lang">
-          {{ lang.name }} ({{ lang.nativeName }})
-        </li>
-      </ul>
-    </p>
-    <img v-bind:src="imgUrl">
+  <div class="flex pt-5">
+    <div class="text-gray-600 font-thin">
+      <button class="bg-gray-500 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded my-2 mx-4">
+        <nuxt-link to="/Search">Back to Search</nuxt-link>
+      </button>
+    </div>
+    <div class="bg-gray-400 rounded-lg overflow-hidden shadow-lg">
+      <div class="object-fill">
+        <img src="../../../assets/pictures/nicer-image.jpg" />
+      </div>
+      <div class="p-4 text-center">
+        <h3 class="sticky top-0 font-semibold text-6xl">{{ fact.name }}</h3>
+        <div class="text-gray-700 text-lg uppercase">
+          {{ fact.subregion }}
+        </div>
+      </div>
+      <div class="flex justify-center text-center px-4 pb-4">
+        <div class="flex-1">
+          <!-- For calling codes -->
+          <span class="font-semibold text-2xl">Calling code(s):</span>
+          <ol>
+            <li class="font-thin text-lg" v-for="code in fact.callingCodes">+{{ code }}</li>
+          </ol>
+        </div>
+        <div class="flex-1">
+          <!-- for time zones -->
+          <span class="font-semibold text-2xl">Timezone(s):</span>
+          <ol>
+            <li class="font-thin text-lg" v-for="tz in fact.timezones">{{ tz }}</li>
+          </ol>
+        </div>
+        <div class="flex-1">
+          <!-- for languages -->
+          <span class="font-semibold text-2xl">Language(s):</span>
+          <ol>
+            <li class="font-thin text-lg" v-for="lang in fact.languages">{{ lang.name }}({{ lang.nativeName }})</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div>
+      <!-- Third section for misc stuff -->
+    </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
+import Info from '../../../components/Info';
 
 export default {
+  components: {
+    Info
+  },
   data() {
     return {
       fact: {}

@@ -3,7 +3,7 @@
     <div class="invisible sm:w-0">
       <!-- first block, used to center the middle content -->
     </div>
-    <div id="app" class="antialiased text-gray-900">
+    <div id="app" class="antialiased text-gray-900 mt-2">
       <div>
         <CountrySearch v-on:search-text="searchText" />
       </div>

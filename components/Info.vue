@@ -1,8 +1,8 @@
 <template>
   <nuxt-link :to="'search/' + name">
     <div class="bg-gray-400 rounded-lg overflow-hidden shadow-lg">
-      <div class="object-cover">
-        <img src="../assets/pictures/sample-banner.jpg" />
+      <div class="object-fill">
+        <img src="../assets/pictures/nicer-image.jpg" />
       </div>
       <div class="p-4">
         <h3 class="sticky top-0 font-semibold text-2xl">{{ name }}</h3>
