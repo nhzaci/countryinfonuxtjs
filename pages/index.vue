@@ -6,12 +6,9 @@
 </template>
 
 <script>
-import Trivia from '../components/Trivia';
-
 
 export default {
   components: {
-    Trivia
   }
 }
 </script>

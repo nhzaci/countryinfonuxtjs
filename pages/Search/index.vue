@@ -31,12 +31,14 @@ export default {
       console.log(err);
     }
   },
-  async searchText(text) {
-    try {
-      const res = await axios.get(`https://restcountries.eu/rest/v2/name/${text}`);
-      this.facts = res.data;
-    } catch (err) {
-      console.log(err);
+  methods: {
+    async searchText(text) {
+      try {
+        const res = await axios.get(`https://restcountries.eu/rest/v2/name/${text}`);
+        this.facts = res.data;
+      } catch (err) {
+        console.log(err);
+      }
     }
   }
 }
