@@ -1,7 +1,5 @@
 <template>
-  <div align="center">
-    <h1>Welcome!</h1>
-    <p>This talks with an api and returns information with a simple search function</p>
+  <div>
   </div>
 </template>
 

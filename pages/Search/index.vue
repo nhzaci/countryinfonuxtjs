@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-center">
-    <div class="invisible sm:w-0">
+    <div class="invisible sm:w-2">
       <!-- first block, used to center the middle content -->
     </div>
     <div id="app" class="antialiased text-gray-900 mt-2">
@@ -13,7 +13,7 @@
         :timezones="fact.timezones" :region="fact.subregion" :acode="fact.alpha2Code" />
       </div>
     </div>
-    <div class="invisible sm:w-0">
+    <div class="invisible sm:w-2">
       <!-- third block used to center the middle content -->
     </div>
   </div>

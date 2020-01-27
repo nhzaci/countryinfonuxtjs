@@ -13,13 +13,13 @@
         <button @click="isOpen = !isOpen" type="button" class="w-10 h-10 focus:text-white hover:text-white">
           <svg class="fill-current h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
             <path v-if="!isOpen" d="M0 3h50v2H0zM0 17h50v2H0zM0 31h50v2H0zM0 45h50v2H0z"/>
-            <path v-if="isOpen" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M16 34l9-9 9-9M16 16l9 9 9 9"/>
+            <path v-if="isOpen" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" d="M16 34l9-9 9-9M16 16l9 9 9 9"/>
           </svg>
         </button>
       </div>
     </div>
     <!-- Second part: drop-down menu -->
-    <div :class="isOpen ? 'block' : 'hidden'" class="px-2 pt-1 pb-4">
+    <div :class="isOpen ? 'block' : 'hidden'" class="px-4 pt-1 pb-4">
       <nuxt-link class="block text-white font-semibold rounded px-2 py-1 hover:bg-gray-800" to='/' v-on:click.native>Home</nuxt-link>
       <nuxt-link class="block text-white font-semibold rounded px-2 py-1 hover:bg-gray-800" to='/about'>About</nuxt-link>
       <nuxt-link class="block text-white font-semibold rounded px-2 py-1 hover:bg-gray-800" to='/Search'>Search</nuxt-link>

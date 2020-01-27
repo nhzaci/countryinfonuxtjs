@@ -10,31 +10,31 @@
         <img src="../../../assets/pictures/nicer-image.jpg" />
       </div>
       <div class="p-4 text-center">
-        <h3 class="sticky top-0 font-semibold text-6xl">{{ fact.name }}</h3>
-        <div class="text-gray-700 text-lg uppercase">
+        <h3 class="top-0 font-semibold text-base xl:6xl lg:6xl md:xl sm:xl">{{ fact.name }}</h3>
+        <div class="text-gray-700 text-base xl:lg lg:lg sm:sm uppercase">
           {{ fact.subregion }}
         </div>
       </div>
       <div class="flex justify-center text-center px-4 pb-4">
         <div class="flex-1">
           <!-- For calling codes -->
-          <span class="font-semibold text-2xl">Calling code(s):</span>
+          <span class="font-semibold text-base xl:2xl lg:2xl sm:sm">Calling code(s):</span>
           <ol>
-            <li class="font-thin text-lg" v-for="code in fact.callingCodes">+{{ code }}</li>
+            <li class="font-thin text-base xl:lg lg:lg sm:xs" v-for="code in fact.callingCodes">+{{ code }}</li>
           </ol>
         </div>
         <div class="flex-1">
           <!-- for time zones -->
-          <span class="font-semibold text-2xl">Timezone(s):</span>
+          <span class="font-semibold text-base xl:2xl sm:sm">Timezone(s):</span>
           <ol>
-            <li class="font-thin text-lg" v-for="tz in fact.timezones">{{ tz }}</li>
+            <li class="font-thin text-base xl:lg sm:xs" v-for="tz in fact.timezones">{{ tz }}</li>
           </ol>
         </div>
         <div class="flex-1">
           <!-- for languages -->
-          <span class="font-semibold text-2xl">Language(s):</span>
+          <span class="font-semibold text-base xl:2xl lg:2xl sm:sm">Language(s):</span>
           <ol>
-            <li class="font-thin text-lg" v-for="lang in fact.languages">{{ lang.name }}({{ lang.nativeName }})</li>
+            <li class="font-thin text-base xl:lg lg:lg sm:xs" v-for="lang in fact.languages">{{ lang.name }}({{ lang.nativeName }})</li>
           </ol>
         </div>
       </div>
