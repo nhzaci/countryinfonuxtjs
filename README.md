@@ -2,7 +2,8 @@
 
 > Home and about pages are not done up, search page has cards done up with a
 potential call to image library if there is one to update banner pictures
-of each country onto the card, but for now it's just a single static picture
+of each country onto the card, but for now it's just a single static picture because
+I can't find a suitable source for an api call
 
 > This static website done in nuxt.js with css done using the tailwind css framework
  talks to the restcountries.eu api to get information about each country 
